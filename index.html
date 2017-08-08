@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Untitled Document</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="">
+		<script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+	</head>
+
+
+	<body ng-app="appModule">
+
+		<p ng-reply="the word"></p>
+
+		<div ng-controller="appController">
+			
+			<input type="text" ng-model="name"><!-- models are for inputs and forms -->
+
+			<h1>{{name}}</h1>
+			
+			<ul>
+				<li ng-repeat="employee in employeeList">{{employee.name}}
+				<span ng-click="showSomething()">{{employee.age}}</span>
+				<card-directive></card-directive>
+				</li>
+			</ul>
+			
+		</div>
+
+		<div ng-controller="jsonDataController">
+			<h2>{{header|capitalized}}</h2>
+			<h2>{{name2|capitalizedWithCount}}</h2>
+			<h3>{{count}}</h3>
+			<p>name = {{name}}</p>
+			<p>age = {{age}}</p>
+			<p>city = {{city}}</p>
+
+		</div>
+		<div ng-controller="companyEmployee">
+			<ul ng-repeat="employee in employees">
+				<li ng-if="$odd">
+					{{$index+1}}.
+					{{employee.name}}
+					{{employee.age}}
+				</li>
+				<li ng-if="$even" style="background-color:#f1f1f1">
+					{{$index+1}}.
+					{{employee.name}}
+					{{employee.age}}
+				</li>
+			</ul>
+		</div>
+
+
+
+
+
+
+		<script src="appModule.js"></script>
+		<script src="appService.js"></script>
+		<script src="appController.js"></script>
+		<script src="appDirective.js"></script>
+		<script src="appFilter.js"></script>
+	</body>
+
+
+</html>
