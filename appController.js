@@ -49,6 +49,13 @@ app.controller("companyEmployee",function($scope,$http){
 	});
 });
 
+app.controller("databaseRecordsSample",function($scope,$http){
+	$http.get("employees.php").then(function(response){
+		console.log(response.data.data);
+		$scope.data = response.data.data;
+	});
+});
+
 
 
 /*

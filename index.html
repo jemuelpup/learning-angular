@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Untitled Document</title>
+		<title>Angular js</title>
 		<meta charset="UTF-8">
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="css/style.css">
 		<script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
 	</head>
 
@@ -51,12 +51,19 @@
 					{{employee.age}}
 				</li>
 			</ul>
+			<h4>{{selectedName}}</h4>
+			<select ng-model="selectedName" name="employees" id="emp" ng-options="employee.name for employee in employees">{{employee.name}}</select>
 		</div>
 
-
-
-
-
+		<div ng-controller="databaseRecordsSample">
+			<table>
+			<tr ng-repeat="d in data">
+				<td>{{d.id}}</td>
+				<td>{{d.name}}</td>
+				<td>{{d.employeeNum}}</td>
+			</tr>
+			</table>
+		</div>
 
 		<script src="appModule.js"></script>
 		<script src="appService.js"></script>
