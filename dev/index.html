@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Angular js</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/reset.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/cardsStyle.css">
+		<link rel="stylesheet" href="/css/contents.css">
+		<script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+	</head>
+
+
+	<body ng-app="appModule">
+
+		<header>
+			
+		</header>
+		<main>
+			<section class="banner">
+				<div class="bannerImg">
+					<img src="/images/banner.jpg" alt="">
+				</div>
+				<div class="textArea">
+					<h2>Lorem ipsum dolor sit amet.</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam unde nesciunt ducimus, dicta repellat dolorem modi aperiam suscipit optio veniam! Esse aspernatur, beatae recusandae. Magni architecto eveniet laboriosam eius voluptatibus!</p>
+				</div>
+			</section>
+			
+			<section class="content">
+				<div class="container-fluid">
+
+
+
+					<div ng-controller="cardList">
+						<ul class="col-list-3">
+							<card-list-style01></card-list-style01>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+		</main>
+		<footer ng-controller="footer">
+			<div class="agreementBlock">
+				<input type="checkbox" ng-model="switch">I agree
+				<button ng-disabled="!switch">Next</button>
+			</div>
+
+			<!-- <div ng-app="" ng-init="mySwitch=true">
+			<p><button ng-disabled="mySwitch">Click Me!</button></p>
+			<p><input type="checkbox" ng-model="mySwitch"/>Button</p>
+			<p>{{ mySwitch }}</p>
+			</div>  -->
+
+		</footer>
+
+	<script src="/appModule.js"></script>
+	<script src="/appService.js"></script>
+	<script src="/appController.js"></script>
+	<script src="/appDirective.js"></script>
+	<script src="/appFilter.js"></script>
+	</body>
+
+</html>
+
+
+
+
