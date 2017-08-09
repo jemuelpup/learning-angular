@@ -40,6 +40,7 @@ app.service('renderinglib', function() {
 			return minHeight + "px";
 		return defaultHeight + "px";
   }
+  
 });
 
 

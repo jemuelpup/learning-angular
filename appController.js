@@ -1,18 +1,13 @@
 app.controller("appController",function($scope){
-
 	$scope.name = "jemuel";
 	$scope.employeeList = [
 	{name:'Jemuel',age:23},
 	{name:'Karen',age:22},
 	{name:'Nathan',age:40},
 	{name:'Liah',age:26}];
-
 	$scope.showSomething = function(){
 		console.log("123123")
-		// $scope.employeeList.name = "hahahah";
-		// console.log(angular.element(e.currentTarget).text());
 	};
-
 });
 
 app.controller("jsonDataController",function($scope,$http,$timeout,$interval,stringLib){
@@ -29,8 +24,6 @@ app.controller("jsonDataController",function($scope,$http,$timeout,$interval,str
 		$scope.age = r.age;
 		$scope.city = r.city;
 	});
-
-
 	var c = 0;
 	$timeout(function(){
 		$scope.header = stringLib.count("Elimanco");
@@ -55,28 +48,27 @@ app.controller("databaseRecordsSample",function($scope,$http){
 		$scope.data = response.data.data;
 	});
 });
+
 app.controller("cardList",function($scope,$http,$timeout,renderinglib){
 	$http.get("/employees.php").then(function(response){
 		$scope.data = response.data.data;
 	});
-
 	$scope.minImgHeight = "200px";
 	$timeout(function(){
 		try {
-			// renderinglib.autoheight('.card-img');
-			// console.log("height "+minHeight);
 			$scope.minImgHeight = renderinglib.minImgHeight('200','.card-img');
-
-			
 		}
 		catch(err) {
-	    // document.getElementById("demo").innerHTML = err.message;
 	    console.log("may mali");
 		}
-
-
-
 	});
+
+
+	$scope.cardClicked = function(e){
+		console.log(angular.element(e));
+		angular.element(e).addClass('active');
+	}
+
 
 });
 
