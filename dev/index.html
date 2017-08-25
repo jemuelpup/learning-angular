@@ -8,9 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/reset.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/css/cardsStyle.css">
-		<link rel="stylesheet" href="/css/contents.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/cards.css">
 		<script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
 	</head>
 
@@ -18,34 +17,37 @@
 	<body ng-app="appModule">
 
 		<header>
-			
+			<div class="container">
+				<p class="themeTitle">My Themes</p>
+				<ul class="navigation-link">
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">dolor sit</a></li>
+					<li><a href="#">quia nulla</a></li>
+				</ul>
+			</div>
 		</header>
 		<main>
-			<section class="banner">
-				<div class="bannerImg">
-					<img src="/images/banner.jpg" alt="">
-				</div>
-				<div class="textArea">
-					<h2>Lorem ipsum dolor sit amet.</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam unde nesciunt ducimus, dicta repellat dolorem modi aperiam suscipit optio veniam! Esse aspernatur, beatae recusandae. Magni architecto eveniet laboriosam eius voluptatibus!</p>
-				</div>
-			</section>
-			
-			<section class="content">
-				<div class="container-fluid">
-
-
-
-					<div ng-controller="cardList">
-						<ul class="col-list-3">
-							<card-list-style01></card-list-style01>
-						</ul>
-					</div>
-				</div>
-			</section>
-			
+			<div class="container">
+					<section class="banner">
+						<h1>Jemuel</h1>
+						<p class="subTitle">Lorem ipsum dolor sit amet consectetur.</p>
+						<p class="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit reprehenderit.</p>
+						<button>Explore my designs</button>
+					</section>
+					
+					<section class="content">
+						<div class="container-fluid">
+							<div class="cards" ng-controller="cards">
+								<!-- create cards -->
+								<profile-card01></profile-card01>
+								<article-card01></article-card01>
+								<article-card02></article-card02>
+							</div>
+						</div>
+					</section>
+			</div>
 		</main>
-		<footer ng-controller="footer">
+		<footer>
 			<div class="agreementBlock">
 				<input type="checkbox" ng-model="switch">I agree
 				<button ng-disabled="!switch">Next</button>
@@ -59,11 +61,11 @@
 
 		</footer>
 
-	<script src="/appModule.js"></script>
-	<script src="/appService.js"></script>
-	<script src="/appController.js"></script>
-	<script src="/appDirective.js"></script>
-	<script src="/appFilter.js"></script>
+	<script src="js/appModule.js"></script>
+	<!-- <script src="js/appService.js"></script> -->
+	<script src="js/appController.js"></script>
+	<script src="js/appDirective.js"></script>
+	<!-- <script src="js/appFilter.js"></script> -->
 	</body>
 
 </html>

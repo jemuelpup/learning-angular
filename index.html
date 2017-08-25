@@ -59,8 +59,9 @@
 		</div>
 
 		<div ng-controller="databaseRecordsSample">
+			<input type="text" ng-model="filterName">
 			<table>
-			<tr ng-repeat="d in data">
+			<tr ng-repeat="d in data | filter : filterName">
 				<td>{{d.id}}</td>
 				<td>{{d.name}}</td>
 				<td>{{d.employeeNum}}</td>
