@@ -66,7 +66,7 @@ app.directive("articleCard02",function(){
 							<p class="title">Title Here</p>
 							<p class="article-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
-						<button>Click</button>
+						<button class="theme-round">Click</button>
 					</div>
 					<div class="cardBanner">
 						<img src="images/portraitPix.jpg" alt="">
